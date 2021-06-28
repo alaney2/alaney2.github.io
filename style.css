@@ -92,6 +92,11 @@ blockquote p {
 }
 
 @media only screen and (max-width: 540px) {
+  html {
+    overflow-x: hidden;
+    height: 100%;
+  }
+
   canvas {
     height: 100%;
   }
