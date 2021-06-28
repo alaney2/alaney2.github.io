@@ -1,5 +1,4 @@
 @import './jmk3xov.css';
-/* @import url("https://use.typekit.net/jmk3xov.css"); */
 
 canvas {
   position: fixed;
@@ -73,7 +72,6 @@ blockquote {
 
 blockquote p {
   color: black;
-  /* background-color: white; */
   font-size: 4rem;
   display: inline;
   line-height: 1;
