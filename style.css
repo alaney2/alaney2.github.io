@@ -16,6 +16,11 @@ canvas {
   overflow-x: hidden;
 }
 
+.icon {
+  color: #6d279c;
+  opacity: 0.7;
+}
+
 main {
   width: 100vw;
   color: white;
