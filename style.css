@@ -13,6 +13,7 @@ canvas {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 main {
@@ -23,12 +24,15 @@ main {
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
-  
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
+li {
+  word-spacing: 0.4rem;
+}
+
+h1, h2, blockquote {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -49,6 +53,7 @@ header {
   font-size: 2.5rem;
   padding: 2rem;
   margin-bottom: var(--spacing);
+  line-height: 0.75;
   border-radius: 15%;
   opacity: 0.7;
   text-align: center;
@@ -79,4 +84,14 @@ blockquote p {
 
 .left {
   grid-column: 6 / 12;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  header {
+    line-height: 1;
+  }
 }
