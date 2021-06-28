@@ -92,11 +92,19 @@ blockquote p {
 }
 
 @media only screen and (max-width: 768px) {
+  canvas {
+    height: 100%;
+  }
+
   main {
     grid-template-columns: repeat(1, 1fr);
   }
 
   header {
     line-height: 1;
+  }
+
+  .left {
+    grid-column: 1;
   }
 }
