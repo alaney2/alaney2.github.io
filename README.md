@@ -1,1 +1,7 @@
-# alaney2.github.io
+## Usage
+
+```
+git clone <this-repo>
+npm install
+npm run dev
+```
