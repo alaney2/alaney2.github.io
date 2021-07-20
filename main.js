@@ -9,7 +9,14 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 // 1.15 for phone screens
-renderer.setSize(window.innerWidth * 1, window.innerHeight);
+// if (window.innerWidth <= 1024 && window.innerHeight <= 1024) {
+//   renderer.setSize(window.innerWidth * 1, window.innerHeight * 1.15);
+// } else {
+//   renderer.setSize(window.innerWidth * 1, window.innerHeight);
+// }
+
+renderer.setSize(window.outerHeight, window.outerHeight);
+
 camera.position.setX(-3);
 camera.position.setZ(30);
 
