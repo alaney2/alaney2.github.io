@@ -1,5 +1,10 @@
 @import './jmk3xov.css';
 
+html {
+  min-height: 100vh;
+  height: auto;
+}
+
 canvas {
   position: fixed;
   top: 0;
