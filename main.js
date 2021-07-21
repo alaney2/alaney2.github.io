@@ -8,7 +8,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.outerHeight, window.outerHeight);
+renderer.setSize(window.innerWidth, window.outerHeight);
 camera.position.setX(-3);
 camera.position.setZ(30);
 
@@ -33,7 +33,7 @@ scene.add( pointLight, ambientLight );
 // Stars
 
 function addStar() {
-  const geometry = new THREE.SphereGeometry( 0.25, 24, 20.5 );
+  const geometry = new THREE.SphereGeometry( 0.25, 24, 24 );
   const material = new THREE.MeshStandardMaterial( { color: 0xffffff } );
   const star = new THREE.Mesh( geometry, material );
 
@@ -55,13 +55,13 @@ scene.background = spaceTexture;
 const alanTexture = new THREE.TextureLoader().load('alan.jpg');
 
 const alan = new THREE.Mesh(
-  new THREE.BoxGeometry( 3, 2.6, 3 ),
+  new THREE.BoxGeometry( 2, 2, 2 ),
   new THREE.MeshBasicMaterial( { map: alanTexture} )
 );
 
 scene.add(alan);
 
-alan.position.x = (2);
+alan.position.x = (3);
 alan.position.z = (-5);
 
 // Sun
@@ -70,7 +70,7 @@ const sunTexture = new THREE.TextureLoader().load('sun.jpg');
 const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const sun = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 27.5),
+  new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial( {
     map: sunTexture,
     normalMap: normalTexture
